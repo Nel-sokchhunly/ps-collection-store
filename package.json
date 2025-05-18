@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "db-seed": "prisma db seed",
-    "postinstall": "prisma generate && prisma db seed"
+    "postinstall": "prisma generate && prisma migrate deploy && prisma db seed"
   },
   "prisma": {
     "schema": "./src/prisma/schema.prisma",
