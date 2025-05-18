@@ -11,7 +11,11 @@ const seed = async () => {
   }
 };
 
-seed().catch((error) => {
-  console.error('Seeding failed:', error);
-  process.exit(1);
-});
+seed()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    process.exit(0);
+  });
